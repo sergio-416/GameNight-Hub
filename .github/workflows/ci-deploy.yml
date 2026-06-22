@@ -39,7 +39,7 @@ jobs:
     outputs:
       sha_short: ${{ steps.sha.outputs.short }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Compute short SHA
         id: sha
@@ -98,7 +98,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     environment: production
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/download-artifact@v8
         with:
